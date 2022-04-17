@@ -1,11 +1,15 @@
 .banner {
-    background: url(../../images/banner/white.jpg);
+    background: url(../../images/banner/creative.jpg);
     height: 100%;
     position: relative;
-    height: 80vh;
+    height: 88vh;
     background-size: cover;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
-.banner-text{
+
+.banner-text {
     /* From https://css.glass */
     background: rgba(21, 169, 255, 0.2);
     border-radius: 8px;
@@ -13,4 +17,28 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.bg-img {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 50%;
+    margin-right: 30px;
+    padding: 40px;
+}
+
+@media screen and (max-width:600px) {
+    .banner {
+        justify-content: center;
+        width: 100%;
+    }
+    .bg-img{
+        width: 90%;
+        padding: 15px;
+    }
+
 }

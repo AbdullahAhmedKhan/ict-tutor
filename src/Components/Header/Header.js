@@ -1,4 +1,4 @@
-import { faRightToBracket } from '@fortawesome/free-solid-svg-icons';
+import { faPowerOff, faRightToBracket } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { signOut } from 'firebase/auth';
 import React from 'react';
@@ -26,12 +26,12 @@ const Header = () => {
                             <Link to="/">Home</Link>
                             <Link to="/services">Services</Link>
                             <Link to="/blogs">Blogs</Link>
-                            <Link to="/about">About</Link>
+                            <Link to="/about">About Me</Link>
 
                         </Nav>
                         {
                             user ?
-                                <button className='btn btn-outline-light rounded-pill border-3' onClick={handleSignOut}>Logout</button>
+                                <button className='btn btn-outline-light rounded-pill border-3' onClick={handleSignOut}><FontAwesomeIcon className='mx-2' icon={faPowerOff}></FontAwesomeIcon>Logout</button>
                                 :
                                 <Nav className='menu-bar'>
 

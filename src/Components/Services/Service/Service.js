@@ -7,8 +7,8 @@ import { useNavigate } from 'react-router-dom';
 const Service = ({ service }) => {
     const { id, name, img, description, price } = service;
     const navigate = useNavigate();
-    const navigateToServiceDetail = id => {
-        navigate(`/service/${id}`);
+    const navigateToCheckout = id => {
+        navigate('/checkout');
     }
     return (
         <div className='service bg-light'>
@@ -17,7 +17,7 @@ const Service = ({ service }) => {
             <h5 style={{ "color": "orange" }}>${price}</h5>
             <p><small>{description}</small></p>
             <p className='text-center'><FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon><FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon><FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon><FontAwesomeIcon className='text-warning' icon={faStar}></FontAwesomeIcon><FontAwesomeIcon className='text-warning' icon={faStarHalfStroke}></FontAwesomeIcon></p>
-            <button onClick={() => navigateToServiceDetail(id)} className='btn w-100 btn-outline-success rounded d-grid mx-auto'>Buy Now</button>
+            <button onClick={navigateToCheckout} className='btn w-100 btn-outline-success rounded d-grid mx-auto'>Buy Now</button>
 
         </div>
     );
