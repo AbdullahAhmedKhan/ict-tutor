@@ -1,11 +1,13 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
+import Services from '../Services/Services';
 
 const Home = () => {
     return (
-        <div>
+        <div style={{minHeight:"100vh"}}>
             <Banner></Banner>
-            <h2>Position</h2>
+            <Services></Services>
+            
         </div>
     );
 };

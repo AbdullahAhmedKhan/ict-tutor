@@ -1,0 +1,30 @@
+[
+    {
+        "id": "1",
+        "name": "Structure Programming(C)",
+        "description": "C is a powerful general-purpose programming language. It can be used to develop software like operating systems, databases, compilers, and so on. C programming is an excellent language to learn to program for beginners.",
+        "price": 8090,
+        "img": "https://i.ibb.co/2F0PVHV/programming.jpg"
+    },
+    {
+        "id": "2",
+        "name": "Number System & Digital Logic Design",
+        "description": "In digital electronics, the number system is used for representing the information. The number system has different bases and the most common of them are the decimal, binary, octal, and hexadecimal.",
+        "price": 5000,
+        "img": "https://i.ibb.co/dpD59m1/number.jpg"
+    },
+    {
+        "id": "3",
+        "name": "Website Design",
+        "description": "Web design encompasses many different skills and disciplines in the production and maintenance of websites. The different areas of web design include web graphic design; user interface design (UI design); user experience design (UX design).",
+        "price": 6500,
+        "img": "https://i.ibb.co/QQ881p9/web-design.jpg"
+    },
+    {
+        "id": "4",
+        "name": "Database Design(SQL)",
+        "description": "SQL is a programming language that is used by most relational database management systems (RDBMS) to manage data stored in tabular form. A relational database consists of multiple tables that relate to each other.",
+        "price": 4800,
+        "img": "https://i.ibb.co/K9C8RrP/database.jpg"
+    }
+]
