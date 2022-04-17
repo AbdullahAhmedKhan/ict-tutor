@@ -9,9 +9,9 @@ import './Header.css';
 const Header = () => {
     return (
         <div>
-            <Navbar sticky='top' collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar className="p-3" sticky='top' collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand href="#home"><img style={{width:"250px"}} src={logo} alt="" /></Navbar.Brand>
+                    <Navbar.Brand ><img style={{width:"250px"}} src={logo} alt="" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto menu-bar">
