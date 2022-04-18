@@ -33,10 +33,6 @@ const Login = () => {
     if (user) {
         navigate(from, { replace: true });
     }
-
-    if (error) {
-        <p className='text-danger'>Error: {error?.message}</p>
-    }
     const handleSubmit = event => {
         event.preventDefault();
         const email = emailRef.current.value;
@@ -74,6 +70,7 @@ const Login = () => {
                     <Button className='w-100' variant="dark" type="submit">
                         Login
                     </Button>
+                    <p className='text-danger mt-3 text-center'>{error?.message}</p>
                     <div className='text-center mt-4'>
                         <span className='me-2'>Forget Password?</span> <span onClick={resetPassword} style={{ cursor: "pointer" }} className='text-dark fw-bold'>Reset Password</span>
                     </div>
