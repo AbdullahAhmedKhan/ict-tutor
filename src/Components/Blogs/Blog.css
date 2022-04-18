@@ -25,9 +25,9 @@
     width: 40%;
     padding: 20px;
     margin: 80px 15px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(99, 99, 99, 0.767) 0px 2px 8px 0px;
     border-radius: 15px;
-    border-top: 5px solid orangered;
+    border-top: 5px solid rgba(6, 158, 33, 0.687);
 }
 
 @media screen and (max-width:992px) {

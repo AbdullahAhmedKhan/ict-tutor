@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Register.css';
 import SocialLogin from './SocialLogin';
@@ -9,6 +9,8 @@ const Register = () => {
     const navigate = useNavigate();
     const emailRef = useRef('');
     const passwordRef = useRef('');
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
     const [agree, setAgree] = useState(false);
 
     const [
@@ -20,7 +22,7 @@ const Register = () => {
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     if (user) {
         if (user.emailVerified === true) {
-            navigate('/');
+            navigate(from, { replace: true });
         }
     }
     const handleLogin = () => {
