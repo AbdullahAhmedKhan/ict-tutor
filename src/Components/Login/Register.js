@@ -39,7 +39,7 @@ const Register = () => {
 
         <div className='register-container'>
             <h1 className='text-center text-light pt-4'>Please Register!</h1>
-            <div className='w-75 mx-auto my-1 register-text p-3'>
+            <div className='mx-auto my-1 register-text p-4'>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Full name</Form.Label>

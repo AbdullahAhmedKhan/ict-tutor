@@ -6,7 +6,7 @@ const About = () => {
         <div className='about-div' style={{ minHeight: "100vh" }}>
             <div className='main-container mx-5'>
                 <div className='div-text'>
-                    <h2><span className='text-light fw-bold fs-1 bg-dark px-2 mx-1 rounded'>A</span>BDULLAH AHAMMED KHAN</h2>
+                    <h2><span className='text-light fw-bold bg-dark px-2 mx-1 rounded'>A</span>BDULLAH AHAMMED KHAN</h2>
                     <hr className='me-2' />
                     <p className='my-0'>I am a fast learner and like to work with new technologies. I feel comfortable working with a team. Creative works, advance UI my favorite zone. </p>
                     <small><span className='fw-bold text-success'>Educational Qualification:</span> BSc. in Computer Science & Engineering</small> <br />

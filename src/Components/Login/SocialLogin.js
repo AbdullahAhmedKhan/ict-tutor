@@ -30,7 +30,7 @@ const SocialLogin = () => {
             </div>
             {errorElement}
             <div>
-                <button onClick={() => signInWithGoogle()} className='btn btn-outline-dark w-100 fw-bold'><img width="35" className='mx-1' src={googleIcon} alt="" />Google Sign In</button>
+                <button onClick={() => signInWithGoogle()} className='btn btn-dark w-100 fw-bold'><img width="35" className='mx-1' src={googleIcon} alt="" />Google Sign In</button>
             </div>
         </div >
     );

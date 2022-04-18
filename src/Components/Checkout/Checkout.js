@@ -27,33 +27,33 @@ const Checkout = () => {
                     <img className='img-fluid' src={checkout} alt="" width='700' />
                 </div>
                 <div className='w-75 mx-auto'>
-                    <form onSubmit={handleSubmit} style={{}} className='border border-2 p-3 rounded shadow bg-light'>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Your Name</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" ref={nameRef} required />
+                    <form onSubmit={handleSubmit} style={{}} className='border border-2 p-3 rounded shadow-lg bg-dark bg-opacity-75 text-light'>
+                        <div className="mb-3">
+                            <label for="exampleInputEmail1" className="form-label">Your Name</label>
+                            <input type="text" className="form-control" id="exampleInputEmail1" ref={nameRef} required />
 
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Service Name</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" ref={emailRef} required />
+                        <div className="mb-3">
+                            <label for="exampleInputEmail1" className="form-label">Service Name</label>
+                            <input type="text" className="form-control" id="exampleInputEmail1" ref={emailRef} required />
 
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Contact No</label>
-                            <input type="number" class="form-control" id="exampleInputEmail1" ref={contactRef} required />
+                        <div className="mb-3">
+                            <label for="exampleInputEmail1" className="form-label">Contact No</label>
+                            <input type="number" className="form-control" id="exampleInputEmail1" ref={contactRef} required />
 
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Your Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" ref={emailRef} required />
+                        <div className="mb-3">
+                            <label for="exampleInputEmail1" className="form-label">Your Email</label>
+                            <input type="email" className="form-control" id="exampleInputEmail1" ref={emailRef} required />
 
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Your Address</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" ref={addressRef} required />
+                        <div className="mb-3">
+                            <label for="exampleInputEmail1" className="form-label">Your Address</label>
+                            <input type="text" className="form-control" id="exampleInputEmail1" ref={addressRef} required />
 
                         </div>
-                        <button type="submit" class="btn btn-success w-100"><FontAwesomeIcon className='mx-2' icon={faCartShopping}></FontAwesomeIcon>Place Order</button>
+                        <button type="submit" className="btn btn-success w-100"><FontAwesomeIcon className='mx-2' icon={faCartShopping}></FontAwesomeIcon>Place Order</button>
                         <ToastContainer></ToastContainer>
                     </form>
                 </div>

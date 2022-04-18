@@ -3,7 +3,7 @@ import './Blog.css';
 const Blogs = () => {
     return (
         <div>
-            <h1 className='text-center border w-75 mx-auto p-3 mt-5 rounded-pill'>Some interesting blogs</h1>
+            <h1 className='text-center border-top p-3 mt-5 rounded d-inline-block bg-light shadow border-danger border-4'>Some interesting blogs</h1>
         <div className='blog-container'>
             
             
