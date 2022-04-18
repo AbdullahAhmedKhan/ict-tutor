@@ -39,7 +39,7 @@ const Register = () => {
 
         <div className='register-container'>
             <h1 className='text-center text-light pt-4'>Please Register!</h1>
-            <div className='w-75 mx-auto my-1 register-text p-5'>
+            <div className='w-75 mx-auto my-1 register-text p-3'>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Full name</Form.Label>
@@ -63,7 +63,7 @@ const Register = () => {
                     </Button>
                     <SocialLogin></SocialLogin>
                     <div className='mt-4'>
-                        <small className='me-1'>Already have an account?</small> <span onClick={handleLogin} style={{ cursor: "pointer", width: "115px" }} className='border border-dark border-3 rounded p-2 my-1 fw-bold'>Please login</span>
+                        <small className='me-1'>Already have an account?</small><span onClick={handleLogin} style={{ cursor: "pointer", width: "115px" }} className='border border-dark border-2 rounded p-1 my-3 fw-bold'>Please login</span>
                     </div>
                 </Form>
             </div>
