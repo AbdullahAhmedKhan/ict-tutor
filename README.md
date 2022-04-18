@@ -1,3 +1,10 @@
+# About Project
+* A ICT Tutor project where student can buy services and will learn about that.
+* Here have four major services.
+* A interesting blog page also included.
+* Login and registration authentication implemented.
+* A interesting practical services also added.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -2,8 +2,11 @@ import React from 'react';
 import './Blog.css';
 const Blogs = () => {
     return (
-        <div className='main-container'>
-            <h2>Blogs</h2>
+        <div>
+            <h1 className='text-center border w-75 mx-auto p-3 mt-5 rounded-pill'>Some interesting blogs</h1>
+        <div className='blog-container'>
+            
+            
             <div className='blog-question-container'>
                 <div className="blog-question">
                     <h4 className='text-success'>Difference between authorization and authentication?</h4>
@@ -26,6 +29,8 @@ const Blogs = () => {
                     <p>Firebase is not only for authentication services. Its provide us so many services like , Cloud Firestore, Cloud Functions, Authentication, Hosting, Cloud Storage, Google Analytics, Predictions, Cloud Messaging. </p>
                 </div>
             </div>
+
+        </div>
         </div>
     );
 };
