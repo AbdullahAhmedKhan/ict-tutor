@@ -1,0 +1,9 @@
+.checkout-container{
+    display: flex;
+}
+@media screen and (max-width:576px) {
+    .checkout-container{
+        flex-direction: column;
+    }
+    
+}
