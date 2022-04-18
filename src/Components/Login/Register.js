@@ -1,6 +1,6 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Register.css';
@@ -9,24 +9,30 @@ const Register = () => {
     const navigate = useNavigate();
     const emailRef = useRef('');
     const passwordRef = useRef('');
+    const [agree, setAgree] = useState(false);
 
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     if (user) {
+        console.log(user);
         navigate('/');
     }
     const handleLogin = () => {
         navigate('/login');
     }
-    const handleSubmit = e => {
-        e.preventDefault();
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const name = event.target.name.value;
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        createUserWithEmailAndPassword(email, password);
+        await createUserWithEmailAndPassword(email, password);
+        await updateProfile({ displayName: name });
+        navigate('/home');
     }
     return (
 
@@ -48,16 +54,16 @@ const Register = () => {
                         <Form.Control type="password" placeholder="Password" required ref={passwordRef} />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" label="Accept terms and conditions" />
+
+                        <Form.Check onClick={() => setAgree(!agree)}  className={`ps-4 ${agree ? '' : 'text-danger'}`} htmlFor="terms" type="checkbox" label="Accept terms and conditions" />
                     </Form.Group>
-                    <Button className='w-100' variant="dark" type="submit">
+                    <Button disabled={!agree} className='w-100' variant="dark" type="submit">
                         Register
                     </Button>
                     <SocialLogin></SocialLogin>
                     <div className='mt-4'>
                         <small className='me-1'>Already have an account?</small> <span onClick={handleLogin} style={{ cursor: "pointer", width: "115px" }} className='border border-dark border-3 rounded p-2 my-1 fw-bold'>Please login</span>
                     </div>
-
                 </Form>
             </div>
         </div>
