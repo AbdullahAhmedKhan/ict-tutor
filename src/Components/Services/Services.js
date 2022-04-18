@@ -15,7 +15,7 @@ const Services = () => {
         <div className='container'>
             <h1 className='services-title mt-5 text-center'>
                 <FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon> 
-                Our Services<FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
+                My Services<FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
                 </h1>
             <hr className='mb-5'/>
             
