@@ -19,8 +19,9 @@ const Register = () => {
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     if (user) {
-        console.log(user);
-        navigate('/');
+        if (user.emailVerified === true) {
+            navigate('/');
+        }
     }
     const handleLogin = () => {
         navigate('/login');
@@ -55,7 +56,7 @@ const Register = () => {
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
 
-                        <Form.Check onClick={() => setAgree(!agree)}  className={`ps-4 ${agree ? '' : 'text-danger'}`} htmlFor="terms" type="checkbox" label="Accept terms and conditions" />
+                        <Form.Check onClick={() => setAgree(!agree)} className={`ps-4 ${agree ? '' : 'text-danger'}`} htmlFor="terms" type="checkbox" label="Accept terms and conditions" />
                     </Form.Group>
                     <Button disabled={!agree} className='w-100' variant="dark" type="submit">
                         Register

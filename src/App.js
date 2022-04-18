@@ -8,6 +8,7 @@ import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import Register from './Components/Login/Register';
+import NotFound from './Components/NotFound/NotFound';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
 import Services from './Components/Services/Services';
 
@@ -31,6 +32,7 @@ function App() {
         }>
 
         </Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
 
